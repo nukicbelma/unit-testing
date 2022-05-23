@@ -28,18 +28,16 @@ namespace sparky
         [Test]
         public void FiboChecker_Input6_ReturnsFiboSeries()
         {
-            List<int> expectedRange = new() { 0, 1, 1, 2, 3, 5 };
-
+            List<int> expectedRange = new List<int>() { 0, 1, 1, 2, 3, 5 };
             Fibo fibo = new();
             fibo.Range = 6;
 
             List<int> result = fibo.GetFiboSeries();
-
             Assert.That(result, Does.Contain(3));
             Assert.That(result.Count, Is.EqualTo(6));
             Assert.That(result, Has.No.Member(4));
-            Assert.That(result, Is.EquivalentTo(expectedRange));
 
+            Assert.That(result, Is.EquivalentTo(expectedRange));
         }
     }
 }

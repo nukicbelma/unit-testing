@@ -17,7 +17,7 @@ namespace sparky
         {
             List<int> fiboSeries = new();
             int a = 0, b = 1, c = 0;
-            if(Range==1)
+            if (Range == 1)
             {
                 fiboSeries.Add(0);
                 return fiboSeries;
@@ -26,12 +26,13 @@ namespace sparky
             fiboSeries.Add(1);
             for (int i = 2; i < Range; i++)
             {
-                c = a = b;
+                c = a + b;
                 fiboSeries.Add(c);
                 a = b;
                 b = c;
             }
             return fiboSeries;
+
         }
     }
 }
